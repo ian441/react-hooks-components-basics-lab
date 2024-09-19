@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState} from "react";
+
 
 function NavBar() {
   return (
@@ -8,23 +9,49 @@ function NavBar() {
   );
 }
 
-function Home() {
+function Home(props) {
+  console.log(props)
   return (
     <div id="home">
       <h1>Home</h1>
     </div>
-  );
+)
 }
+function About(props) {
+  console.log(props)
+  return(
+    <div id="about">
+    <h1>About</h1>
+    </div>
+  )
+ }
 
-{/* write an <About> component here */}
+ 
 
+//   function Tabs() {
+//    const [activeTab, setActiveTab] = useState("home");
+ 
 
+//  return (
+//    <div>
+//     <nav>
+//        <button onClick={() => setActiveTab("home")}>Home</button>
+//      <button onClick={() => setActiveTab("about")}>About</button>
+//      </nav>
+//      <div>
+//          {activeTab === "home" && <Home />}
+//          {activeTab === "about" && <About />}
+//       </div>
+//   </div>
+//  )
+
+ 
 function App() {
   return (
     <div>
       <NavBar />
-      {/* add the <Home> component here */}
-      {/* add your <About> component here */}
+     <Home />
+     <About />
     </div>
   );
 }
